@@ -6,8 +6,8 @@
 -- two dots ('..' - without quotes).
 
 CREATE TABLE "departments" (
-    "dept_no" string   NOT NULL,
-    "dept_name" string   NOT NULL,
+    "dept_no" VARCHAR(5)   NOT NULL,
+    "dept_name" VARCHAR(20)   NOT NULL,
     CONSTRAINT "pk_departments" PRIMARY KEY (
         "dept_no"
      )
@@ -15,7 +15,7 @@ CREATE TABLE "departments" (
 
 CREATE TABLE "dept_emp" (
     "emp_no" int   NOT NULL,
-    "dept_no" int   NOT NULL,
+    "dept_no" VARCHAR(5)   NOT NULL,
     "from_date" date   NOT NULL,
     "to_date" date   NOT NULL,
     CONSTRAINT "pk_dept_emp" PRIMARY KEY (
@@ -24,8 +24,8 @@ CREATE TABLE "dept_emp" (
 );
 
 CREATE TABLE "dept_manager" (
-    "dept_no" string   NOT NULL,
-    "emp_no" int   NOT NULL,
+    "dept_no" int   NOT NULL,
+    "emp_no" VARCHAR(5)   NOT NULL,
     "from_date" date   NOT NULL,
     "to_date" date   NOT NULL
 );
